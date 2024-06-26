@@ -14,94 +14,128 @@
         <div class="card-header fs-3 fw-bold">
           Payment form example
         </div>
-        <div class="card-body">
+    <div class="card-body">
         <div class="alert alert-danger fw-semibold" role="alert">
             Some fields are missing
         </div>
-<!--First row-->
-            <div class="row">
-                <div class="col-lg-5 col-sm-6 d-flex" style="flex-direction: column;">
-                    <label for="Card" class="form-label fw-semibold">Card #</label>
-                    <input type="text" class="border border-secondary-subtle ps-2" placeholder="ESXX-XXXX-XXXX-XXXXXXXX">
+    </div>
+     
+    
+
+    <form class="row g-3 ps-3 pe-3">
+            <!--First row-->
+                <div class="col-lg-6 col-md-12 d-grid-block was-validated">
+                    <label for="validationCard" class="form-label fw-semibold">Card #</label>
+                    <input type="text" class="form-control border border-secondary-subtle ps-2" placeholder="ESXX-XXXX-XXXX-XXXXXXXX" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please, make sure it is writen the same way as the credit/debit card</div>
                 </div>
-                <div class="col-lg-3 col-sm-6 d-grid">
-                    <label for="Card" class="form-label fw-semibold">CVC #</label>
-                    <input type="text" class="border border-secondary-subtle  ps-2" placeholder="000">
+                <div class="col-lg-3 col-sm-6 d-grid-block was-validated">
+                    <label for="validationCVC" class="form-label fw-semibold">CVC #</label>
+                    <input type="text" class="form-control border border-secondary-subtle ps-2" placeholder="000" value="" required>
+                    <div class="valid-feedback">Looks good!</div>
                 </div>
-                <div class="col-lg-4 col-sm-6 d-flex" style="flex-direction: column;">
-                    <label for="Card" class="form-label fw-semibold">Amount $</label>
-                    <input type="text" class="border border-secondary-subtle  ps-2" placeholder="Amount">
+                <div class="col-lg-3 col-sm-6 d-grid-block was-validated">
+                    <label for="validationAmount" class="form-label fw-semibold">Amount $</label>
+                    <input type="text" class="form-control border border-secondary-subtle ps-2" placeholder="Amount" value="" required>
+                    <div class="valid-feedback">That's right, give me your money</div>
+                    <div class="invalid-feedback">Don't be stingy</div>
                 </div>
-            </div>
+            
 <!--Second row-->
-            <div class="row mt-4">
-                <div class="col d-flex" style="flex-direction: column;">
-                    <label for="Card" class="form-label fw-semibold">First Name</label>
-                    <input type="text"  class="border border-secondary-subtle">
+            
+                <div class="col-lg-6 col-sm-6 d-grid was-validated" style="flex-direction: column;">
+                    <label for="validationFName" class="form-label fw-semibold">First Name</label>
+                    <input type="text"  class="form-control border border-secondary-subtle" required>
+                    <div class="valid-feedback">Well, it seems like you remembered...</div>
+                    <div class="invalid-feedback">How can it be you don't know how to write your own name?</div>
                 </div>
-                <div class="col d-flex" style="flex-direction: column;">
-                    <label for="Card" class="form-label fw-semibold">Last Name</label>
-                    <input type="text"  class="border border-secondary-subtle">
+                <div class="col-lg-6 col-sm-6 d-grid was-validated"  style="flex-direction: column;">
+                    <label for="validationLName" class="form-label fw-semibold">Last Name</label>
+                    <input type="text"  class="form-control border border-secondary-subtle" required>
+                    <div class="valid-feedback">Well, it seems like you remembered...</div>
+                    <div class="invalid-feedback">How can it be you don't know how to write your Last Name?</div>
                 </div>
-            </div>
+
 <!--Third row-->
-            <div class="row mt-4">
-                <div class="col-6 d-flex" style="flex-direction: column;">
-                    <label for="Card" class="form-label fw-semibold">City</label>
-                    <input type="text"  class="border border-secondary-subtle">
+            
+                <div class="col-lg-6 col-md-6 d-flex was-validated" style="flex-direction: column;">
+                    <label for="validationCity" class="form-label fw-semibold">City</label>
+                    <input type="text" class="form-control border border-secondary-subtle" required>
+                    <div class="valid-feedback">Under a bridge, for sure</div>
+                    <div class="invalid-feedback">If you don't know where you live, I can't help you</div>
                 </div>
-                <div class="col">
-                    <div class="col"></div>
-                        <label for="Card" class="form-label fw-semibold">State</label>
-                        <select class="form-select form-select-sm border-secondary-subtle fw-semibold text-body-secondary">
-                            <option selected>Pick a state</option>
+                <div class="col-lg-3 col-md-6">
+                    <div class="col was-validated">
+                        <label for="validationState" class="form-label fw-semibold">State</label>
+                        <select class="form-select border-secondary-subtle fw-semibold text-body-secondary" aria-describedby="validationServer04Feedback" required>>
+                            <option selected disabled value="">Pick a state</option>
+                            <option>Alabama</option>
+                            <option>Arizona</option>
+                            <option>California</option>
+                            <option>Colorado</option>
+                            <option>Texas</option>
+                            <option>Florida</option>
+                            <option>Giorgia</option>
+                            <option>Luisiana</option>
+                            <option>Mississipi</option>
+                            <option>Nevada</option>
+                            <option>Ohio</option>
+                            <option>Pensilvania</option>
+                            <option>Utah</option>
                         </select>
-                    </div>
-                    <div class="col d-grid">
-                        <label for="Card" class="form-label fw-semibold">Postal Code</label>
-                        <input type="text" class="border border-secondary-subtle">
+                        <div class="valid-feedback">That's where you live? I pity you</div>
+                        <div class="invalid-feedback">Please, don't make me repeat it, choose one</div>
                     </div>
                 </div>
-            </div>
+                
+
+                <div class="col-lg-3 col-sm-12 d-flex was-validated" style="flex-direction: column;">
+                    <label for="validationPC" class="form-label fw-semibold">Postal Code</label>
+                    <input type="text" class="form-control border border-secondary-subtle" required>
+                </div>
+                
 <!--Fourth row-->
-            <div class="row mb-4">
-                <div class="col ms-3 d-flex" style="flex-direction: column;">
-                    <label for="Card" class="form-label fw-semibold d-inline-block">We accept:</label>
+            
+                <div class="col-lg-6 col-md-6 col-sm-6 d-flex" style="flex-direction: column;">
+                    <label for="validationCard2" class="form-label fw-semibold d-inline-block">We accept:</label>
                     <span class="badge col-6 text-bg-secondary d-flex justify-content-evenly" style="height: 40px; padding-top: 10px;">
                             <div class="col d-inline-block">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <input type="radio" class="form-check-input" name="flexRadioDefault" id="flexRadioDefault1">
                                 <label class="form-check-label align-bottom fs-6" for="flexRadioDefault1"><i class="fa-brands fa-cc-mastercard"></i></label>
                             </div>
                             <div class="col d-inline-block">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label align-bottom" fs-6 for="flexRadioDefault1"><i class="fa-brands fa-cc-visa"></i></label>
+                                <input type="radio" class="form-check-input" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-check-label align-bottom fs-6" for="flexRadioDefault1"><i class="fa-brands fa-cc-visa"></i></label>
                             </div>
                             <div class="col d-inline-block">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <input type="radio" class="form-check-input" name="flexRadioDefault" id="flexRadioDefault1">
                                 <label class="form-check-label align-bottom fs-6" for="flexRadioDefault1"><i class="fa-brands fa-cc-diners-club"></i></label>
                             </div>
                                 <div class="col d-inline-block">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <input type="radio" class="form-check-input" name="flexRadioDefault" id="flexRadioDefault1">
                                 <label class="form-check-label align-bottom fs-6" for="flexRadioDefault1"><i class="fa-brands fa-cc-amex"></i></label>
                             </div>
                     </span>
                 </div>
-                <div class="col me-3">
-                    <label for="Card" class="form-label fw-semibold">Message</label>
-                    <textarea class="form-control border-secondary-subtle" ></textarea>
+                <div class="col-lg-6 col-md-6 col-sm-6  was-validated">
+                    <label for="validationMessage" class="form-label fw-semibold">Message</label>
+                    <textarea class="form-control" required></textarea>
                     <span id="passwordHelpInline" class="form-text fw-semibold" style="font-size: 12px;">
                         Add any notes here.
                     </span>
-                </div>
-            </div>
-
+                    <div class="valid-feedback">You are making me waste my time</div>
+                    <div class="invalid-feedback">Don't write, I won't read it</div>
+                  </div>
+            
+<!--Footer-->
             <div class="card-footer text-body-secondary d-inline-flex justify-content-end">
-                <a href="#" class="btn btn-secondary me-2 fw-semibold">Cancel</a>
-                <a href="#" class="btn btn-primary fw-semibold">Send</a>
+                <button class="btn btn-secondary me-2 fw-semibold" type="cancel">Cancel</a>
+                <button class="btn btn-primary fw-semibold" type="submit">Send</a>
             </div>
           </div>
     </div>
-        
+</form> 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 </body>

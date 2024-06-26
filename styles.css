@@ -2,9 +2,7 @@ input, textarea{
     border-radius: 3px;
 }
 
-input{
-    height: 30px;
-}
+
 
 textarea{
     height: 80px;
