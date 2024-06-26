@@ -23,10 +23,10 @@
     
 
     <form class="row g-3 ps-3 pe-3">
-            <!--First row-->
+    <!--First row-->
                 <div class="col-lg-6 col-md-12 d-grid-block was-validated">
                     <label for="validationCard" class="form-label fw-semibold">Card #</label>
-                    <input type="text" class="form-control ps-2" placeholder="ESXX-XXXX-XXXX-XXXXXXXX" required>
+                    <input type="text" class="form-control ps-2" id="validationCard" placeholder="ESXX-XXXX-XXXX-XXXXXXXX" required>
                     <div class="valid-feedback">Looks good!</div>
                     <div class="invalid-feedback">Please, make sure it is writen the same way as the credit/debit card</div>
                 </div>
@@ -43,18 +43,17 @@
                 </div>
             
 <!--Second row-->
-            
                 <div class="col-lg-6 col-sm-6 d-grid was-validated" style="flex-direction: column;">
                     <label for="validationFName" class="form-label fw-semibold">First Name</label>
                     <input type="text"  class="form-control" required>
-                    <div class="valid-feedback">Well, it seems like you remembered...</div>
-                    <div class="invalid-feedback">How can it be you don't know how to write your own name?</div>
+                    <div class="valid-feedback">You have a plain name...</div>
+                    <div class="invalid-feedback">How can it be you don't know your own name?</div>
                 </div>
-                <div class="col-lg-6 col-sm-6 d-grid was-validated"  style="flex-direction: column;">
+                <div class="col-lg-6 col-sm-6 d-grid was-validated" style="flex-direction: column;">
                     <label for="validationLName" class="form-label fw-semibold">Last Name</label>
                     <input type="text"  class="form-control" required>
                     <div class="valid-feedback">Well, it seems like you remembered...</div>
-                    <div class="invalid-feedback">How can it be you don't know how to write your Last Name?</div>
+                    <div class="invalid-feedback">How can it be you don't know your Last Name?</div>
                 </div>
 
 <!--Third row-->
@@ -118,7 +117,7 @@
                             </div>
                     </span>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6  was-validated">
+                <div class="col-lg-6 col-md-6 col-sm-6 was-validated">
                     <label for="validationMessage" class="form-label fw-semibold">Message</label>
                     <textarea class="form-control" required></textarea>
                     <span id="passwordHelpInline" class="form-text fw-semibold" style="font-size: 12px;">
